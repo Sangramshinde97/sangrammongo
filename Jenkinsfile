@@ -9,12 +9,12 @@ pipeline {
           args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
         }
       }
-      //steps {
-        //sh 'echo passed'
+      steps {
+        sh 'echo passed'
         //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
         //sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean package'
-      //}
-    //}
+      }
+    }
     stage('Build and Push Docker Image') {
       agent any
       environment {
