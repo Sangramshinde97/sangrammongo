@@ -12,7 +12,7 @@ pipeline {
       steps {
         sh 'echo passed'
         //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
-        sh 'mvn clean package'
+        sh 'cd MongoDBapp && mvn clean package'
       }
     }
     stage('Build and Push Docker Image') {
